@@ -1,0 +1,269 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700;800&display=swap");
+:root {
+  --primary-color: #007af3;
+}
+
+body {
+  margin: 0;
+  background: #f2f2f2;
+  font-family: "poppins";
+  height: 100vh;
+}
+body .navbar {
+  background: white;
+  padding: 0.5em;
+}
+body .navbar .navbar-container {
+  margin-left: 1em;
+}
+body .navbar .navbar-container .container-logo {
+  display: flex;
+  cursor: pointer;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+body .navbar .navbar-container .container-logo .logo-icon {
+  width: 4em;
+}
+body .navbar .navbar-container .container-logo .logo-bar {
+  height: 4em;
+}
+body .navbar .navbar-container .container-logo .logo-words-container {
+  padding: 0.2em;
+  align-content: center;
+  display: grid;
+}
+body .navbar .navbar-container .container-logo .logo-words-container .logo-up {
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+  font-size: 1.1em;
+}
+body .navbar .navbar-container .container-logo .logo-words-container .logo-up span {
+  color: var(--primary-color);
+}
+body .navbar .navbar-container .container-logo .logo-words-container .logo-down {
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+  font-size: 1.2em;
+}
+body .navbar .navbar-container .container-logo:hover {
+  transform: scale(1.015, 1.015);
+}
+body .navbar.blur {
+  filter: blur(2px);
+}
+body .container {
+  margin: 2em 4em;
+  display: flex;
+}
+body .container .container-left {
+  padding-left: 5em;
+  height: 80vh;
+}
+body .container .container-left img {
+  height: 100%;
+}
+body .container .container-right {
+  margin-top: 2em;
+  margin-left: 8em;
+  min-width: 30em;
+}
+body .container .container-right .text-container {
+  margin-top: 4em;
+  display: flex;
+  flex-direction: column;
+}
+body .container .container-right .text-container a {
+  margin-top: 0;
+  margin-bottom: 1em;
+  font-weight: bold;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  color: gray;
+}
+body .container .container-right .info a {
+  margin-top: 0;
+  margin-bottom: 1em;
+  font-weight: bold;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  color: gray;
+}
+body .container .container-right .reserve {
+  margin-top: 1.5em;
+  background: var(--primary-color);
+  color: white;
+  padding: 0.7em 1.2em;
+  font-size: 1.02em;
+  border-radius: 5em;
+  font-weight: bold;
+  display: inline-block;
+  letter-spacing: 0.4px;
+  border: none;
+}
+body .container .container-right .reserve:hover {
+  transform: scale(1.03, 1.03);
+}
+body .container .container-right .reserve.unwork {
+  margin-top: 1.5em;
+  color: gray;
+  padding: 0.7em 1.2em;
+  font-size: 1.02em;
+  border-radius: 5em;
+  font-weight: bold;
+  display: inline-block;
+  letter-spacing: 0.4px;
+  border: 0.15em gray;
+  border-style: solid;
+  background: none;
+}
+body .container .container-right .reserve.unwork:hover {
+  transform: none;
+}
+body .container .container-right .unreserve {
+  margin-top: 1.5em;
+  margin-left: 1.2em;
+  color: gray;
+  padding: 0.7em 1.2em;
+  font-size: 1.02em;
+  border-radius: 5em;
+  font-weight: bold;
+  display: inline-block;
+  letter-spacing: 0.4px;
+  border: 0.15em gray;
+  border-style: solid;
+}
+body .container .container-right .unreserve.work {
+  margin-top: 1.5em;
+  margin-left: 1.2em;
+  background: var(--primary-color);
+  color: white;
+  padding: 0.7em 1.2em;
+  font-size: 1.02em;
+  border-radius: 5em;
+  font-weight: bold;
+  display: inline-block;
+  letter-spacing: 0.4px;
+  border: none;
+}
+body .container .container-right .unreserve.work:hover {
+  transform: scale(1.03, 1.03);
+}
+body .container.blur {
+  filter: blur(2px);
+}
+
+section.reservation {
+  display: none;
+}
+
+section.reservation.display {
+  display: block !important;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translate(-50%);
+  background: white;
+  display: flex;
+  flex-direction: column;
+  width: 30em;
+  border-radius: 0.8em;
+  box-shadow: 0 4px 8px 0 rgba(53, 50, 50, 0.19), 0 6px 20px 0 rgba(53, 50, 50, 0.19);
+}
+section.reservation.display .container-top {
+  display: flex;
+  justify-content: flex-end;
+}
+section.reservation.display .container-top img {
+  width: 2em;
+  margin: 0.8em 0.8em 0 0.8em;
+}
+section.reservation.display .container-top img:hover {
+  cursor: pointer;
+  transform: scale(1.05, 1.05);
+}
+section.reservation.display .container-contents {
+  margin: 0 0em 2.5em 0em;
+  display: flex;
+  flex-direction: row;
+}
+section.reservation.display .container-contents img {
+  width: 12em;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+}
+section.reservation.display .container-contents .container-text {
+  margin-top: 1.8em;
+  padding-right: 0.5em;
+  margin-right: 1em;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+section.reservation.display .container-contents .container-text .subhead {
+  color: gray;
+  margin-top: 2em;
+  font-weight: bold;
+  text-align: center;
+}
+
+section.unreserve {
+  display: none;
+}
+
+section.unreserve.display {
+  display: block !important;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translate(-50%);
+  background: white;
+  display: flex;
+  flex-direction: column;
+  width: 30em;
+  border-radius: 0.8em;
+  box-shadow: 0 4px 8px 0 rgba(53, 50, 50, 0.19), 0 6px 20px 0 rgba(53, 50, 50, 0.19);
+}
+section.unreserve.display .container-top {
+  display: flex;
+  justify-content: flex-end;
+}
+section.unreserve.display .container-top img {
+  width: 2em;
+  margin: 0.8em 0.8em 0 0.8em;
+}
+section.unreserve.display .container-top img:hover {
+  cursor: pointer;
+  transform: scale(1.05, 1.05);
+}
+section.unreserve.display .container-contents {
+  margin: 0 0em 2.5em 0em;
+  display: flex;
+  flex-direction: row;
+}
+section.unreserve.display .container-contents img {
+  width: 12em;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+}
+section.unreserve.display .container-contents .container-text {
+  margin-top: 2.2em;
+  padding-right: 0.5em;
+  margin-right: 1em;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+section.unreserve.display .container-contents .container-text .subhead {
+  color: gray;
+  margin-top: 2em;
+  font-weight: bold;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}/*# sourceMappingURL=bookview.css.map */

@@ -1,0 +1,246 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700;800&display=swap");
+:root {
+  --primary-color: #007af3;
+}
+
+body {
+  background: #f2f2f2;
+  margin: 0;
+  font-family: "Poppins";
+}
+
+.navbar {
+  background: white;
+  padding: 0.5em;
+}
+.navbar .navbar-container {
+  margin-left: 1em;
+}
+.navbar .navbar-container .container-logo {
+  display: flex;
+  cursor: pointer;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.navbar .navbar-container .container-logo .logo-icon {
+  width: 4em;
+}
+.navbar .navbar-container .container-logo .logo-bar {
+  height: 4em;
+}
+.navbar .navbar-container .container-logo .logo-words-container {
+  padding: 0.2em;
+  align-content: center;
+  display: grid;
+}
+.navbar .navbar-container .container-logo .logo-words-container .logo-up {
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+  font-size: 1.1em;
+}
+.navbar .navbar-container .container-logo .logo-words-container .logo-up span {
+  color: var(--primary-color);
+}
+.navbar .navbar-container .container-logo .logo-words-container .logo-down {
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+  font-size: 1.2em;
+}
+.navbar .navbar-container .container-logo:hover {
+  transform: scale(1.015, 1.015);
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  padding: 2em 2em;
+}
+
+.hero .container {
+  display: flex;
+}
+.hero .container .container-left {
+  background-color: white;
+  padding: 1em;
+  height: 36em;
+  border-radius: 1em;
+  text-align: center;
+  align-items: center;
+  text-decoration: none;
+  box-shadow: 0 4px 8px 0 rgba(96, 92, 92, 0.19), 0 6px 20px 0 rgba(96, 92, 92, 0.19);
+}
+.hero .container .container-left nav {
+  margin-top: 0.5em;
+  display: flex;
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+  background: white;
+  padding: 0.3em;
+  border-radius: 0.4em;
+}
+.hero .container .container-left nav .search-icon {
+  margin: 0.3em;
+  width: 1em;
+}
+.hero .container .container-left nav .searchbar {
+  border: 0;
+  outline: none;
+  background: none;
+}
+.hero .container .container-left .container-genre {
+  height: 31em;
+  overflow-y: scroll;
+  margin-top: 1.5em;
+}
+.hero .container .container-left .container-genre .subhead {
+  margin-top: 0;
+  margin-bottom: 1.5em;
+  font-weight: bold;
+}
+.hero .container .container-left .container-genre ul.genre li a img {
+  width: 12em;
+  border-radius: 1em;
+}
+.hero .container .container-left .container-genre ul.genre li a img:hover {
+  transform: scale(1.02, 1.02);
+}
+.hero .container .container-left .container-genre ul.genre li a p {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: gray;
+  margin-top: 0;
+  margin-bottom: 2em;
+}
+.hero .container .container-left .container-genre ul.genre .add-genre {
+  display: flex;
+  justify-content: center;
+}
+.hero .container .container-left .container-genre ul.genre .add-genre a .img-container {
+  display: flex;
+  justify-content: center;
+  border-style: solid;
+  border-width: 0.8em;
+  border-color: #404040;
+  border-radius: 1em;
+  width: 8em;
+  height: 10em;
+  align-items: center;
+}
+.hero .container .container-left .container-genre ul.genre .add-genre a .img-container img {
+  width: 6em;
+  border-radius: 1em;
+}
+.hero .container .container-left .container-genre ul.genre .add-genre a .img-container img:hover {
+  transform: none;
+}
+.hero .container .container-left .container-genre ul.genre .add-genre a .img-container:hover {
+  transform: scale(1.02, 1.02);
+}
+.hero .container .container-left .container-genre ul.genre .add-genre a p {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: gray;
+  margin-top: 0.5em;
+  margin-bottom: 2em;
+}
+.hero .container .container-right {
+  margin: 0 0 0 5em;
+  background-color: white;
+  padding: 1.5em 2em;
+  height: 35em;
+  border-radius: 1em;
+  text-decoration: none;
+  width: 100%;
+  box-shadow: 0 4px 8px 0 rgba(96, 92, 92, 0.19), 0 6px 20px 0 rgba(96, 92, 92, 0.19);
+}
+.hero .container .container-right .subhead {
+  margin-top: 0em;
+  margin-bottom: 1.5em;
+  font-weight: bold;
+}
+.hero .container .container-right .overflow {
+  height: 32em;
+  overflow-y: scroll;
+}
+.hero .container .container-right .overflow .container-books {
+  margin-left: 2em;
+}
+.hero .container .container-right .overflow .container-books ul.books {
+  display: grid;
+  grid-template-columns: repeat(4, 14em);
+  grid-gap: 0.1em;
+}
+.hero .container .container-right .overflow .container-books ul.books li {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: flex;
+  justify-content: center;
+}
+.hero .container .container-right .overflow .container-books ul.books li a {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.hero .container .container-right .overflow .container-books ul.books li a img {
+  width: 12em;
+  opacity: 1;
+  transition: 0.5s ease;
+}
+.hero .container .container-right .overflow .container-books ul.books li a img:hover {
+  opacity: 0.8;
+}
+.hero .container .container-right .overflow .container-books ul.books li a p {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: gray;
+  margin-top: 0.5em;
+  margin-bottom: 2em;
+}
+.hero .container .container-right .overflow .container-books ul.books li.add-book {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.hero .container .container-right .overflow .container-books ul.books li.add-book a .img-container {
+  display: flex;
+  justify-content: center;
+  border-style: solid;
+  border-width: 0.8em;
+  border-color: #404040;
+  border-radius: 1em;
+  width: 8em;
+  height: 10em;
+  align-items: center;
+}
+.hero .container .container-right .overflow .container-books ul.books li.add-book a .img-container img {
+  width: 6em;
+  border-radius: 1em;
+}
+.hero .container .container-right .overflow .container-books ul.books li.add-book a .img-container img:hover {
+  transform: none;
+  opacity: 1;
+}
+.hero .container .container-right .overflow .container-books ul.books li.add-book a .img-container:hover {
+  transform: scale(1.02, 1.02);
+}
+.hero .container .container-right .overflow .container-books ul.books li.add-book a p {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: gray;
+  margin-top: 0.5em;
+  margin-bottom: 2em;
+}/*# sourceMappingURL=main.css.map */
