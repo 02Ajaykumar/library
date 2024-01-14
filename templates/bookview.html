@@ -1,0 +1,153 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static '/css/bookview.css' %}" />
+    <title>View Book</title>
+  </head>
+  <body>
+    <div id="navbar" class="navbar">
+      <div class="navbar-container">
+        <a href="/home">
+          <div class="container-logo">
+            <img
+              class="logo-icon"
+              src="{% static 'images/logo.jpg' %}"
+              alt="logo"
+            />
+            <img
+              class="logo-bar"
+              src="{% static 'images/line.jpg' %}"
+              alt="line"
+            />
+            <div class="logo-words-container">
+              <a class="logo-up" href="#"><span>AVRS</span></a>
+              <a class="logo-down" href="#">Library</a>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div id="container" class="container">
+      <div class="container-left">
+        <img src="{{book.img.url}}" alt="book" />
+      </div>
+      <div class="container-right">
+        <div class="text-container">
+          <a href="#">Book Name : {{bookname}}</a>
+          <a href="#">Category : {{category}}</a>
+          <a href="#">Author : {{author}}</a>
+          <a href="#">publisher : {{publication}}</a>
+          <a href="#">description : /- </a>
+        </div>
+        <div class="info">
+          <a href="#">Availability : {{availability}} books</a>
+        </div>
+        <form action="">
+          <input
+            id="reserveBtn"
+            class="reserve"
+            type="Submit"
+            value="RESERVE BOOK"
+          />
+          <input
+            id="unreserveBtn"
+            class="unreserve"
+            type="Submit"
+            value="UNRESERVE"
+          />
+        </form>
+      </div>
+    </div>
+    <section class="reservation">
+      <div class="container-top">
+        <img
+          id="exitReserve"
+          class="close"
+          src="{% static 'images/cross.svg' %}"
+          alt="close"
+        />
+      </div>
+      <div class="container-contents">
+        <img
+          class="success"
+          src="{% static 'images/checkmark-icon.jpg' %}"
+          alt="tickmark"
+        />
+        <div class="container-text">
+          <p class="subhead">
+            The book has been reserved successfully . Please collect the book
+            within 2 days .
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="unreserve">
+      <div class="container-top">
+        <img
+          id="exitUnreserve"
+          class="close"
+          src="{% static 'images/cross.svg' %}"
+          alt="close"
+        />
+      </div>
+      <div class="container-contents">
+        <img
+          class="success"
+          src="{% static 'images/checkmark-icon.jpg' %}"
+          alt="tickmark"
+        />
+        <div class="container-text">
+          <p class="subhead">The book has been unreserved successfully</p>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      const reserveBtn = document.getElementById("reserveBtn");
+      const unreserveBtn = document.getElementById("unreserveBtn");
+      const reserve = document.querySelector("section.reservation");
+      const unreserve = document.querySelector("section.unreserve");
+      const exitReserve = document.getElementById("exitReserve");
+      const exitUnreserve = document.getElementById("exitUnreserve");
+      const navbar = document.getElementById("navbar");
+      const container = document.getElementById("container");
+      reserveBtn.disabled = false;
+      unreserveBtn.disabled = true;
+      reserveBtn.addEventListener("click", () => {
+        reserve.classList.add("display");
+        navbar.classList.add("blur");
+        container.classList.add("blur");
+        reserveBtn.disabled = true;
+        unreserveBtn.disabled = false;
+        reserveBtn.classList.add("unwork");
+        unreserveBtn.classList.add("work");
+      });
+
+      exitReserve.addEventListener("click", () => {
+        reserve.classList.remove("display");
+        navbar.classList.remove("blur");
+        container.classList.remove("blur");
+      });
+
+      unreserveBtn.addEventListener("click", () => {
+        unreserve.classList.add("display");
+        navbar.classList.add("blur");
+        container.classList.add("blur");
+        reserveBtn.disabled = false;
+        unreserveBtn.disabled = true;
+        unreserveBtn.classList.remove("work");
+        reserveBtn.classList.remove("unwork");
+      });
+
+      exitUnreserve.addEventListener("click", () => {
+        unreserve.classList.remove("display");
+        navbar.classList.remove("blur");
+        container.classList.remove("blur");
+      });
+    </script>
+  </body>
+</html>

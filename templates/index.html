@@ -1,0 +1,95 @@
+{% load static %} {% static "images" as baseUrl%}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AVRS Library</title>
+    <link rel="stylesheet" href="{% static '/css/main.css' %}" />
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="navbar-container">
+        <a href="/home">
+          <div class="container-logo">
+            <img
+              class="logo-icon"
+              src="{% static '/images/logo.jpg' %}"
+              alt="logo"
+            />
+            <img
+              class="logo-bar"
+              src="{% static '/images/line.jpg' %}"
+              alt="line"
+            />
+            <div class="logo-words-container">
+              <a class="logo-up" href="#"><span>AVRS</span></a>
+              <a class="logo-down" href="#">Library</a>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <section class="hero">
+      <div class="container">
+        <div class="container-left">
+          <nav>
+            <img
+              class="search-icon"
+              src="{% static '/images/search.svg' %}"
+              alt="Open navigation"
+            />
+            <form action="/search/" method="post">
+              {% csrf_token %}
+              <input
+                id="search-cta"
+                class="searchbar"
+                placeholder="Search books ..."
+                size="35"
+                type="text"
+                value=""
+                name="str"
+              />
+              <input type="submit" hidden />
+            </form>
+          </nav>
+          <div class="container-genre">
+            <p class="subhead">Categories</p>
+            <div>
+              <ul class="genre">
+                {% for category in categories %}
+                <li>
+                  <a href="/home/{{category.name}}">
+                    <img src="{{category.img.url}}" alt="book-genre" />
+                    <p>{{category.name}}</p>
+                  </a>
+                </li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="container-right">
+          <p class="subhead">{{books_category}}</p>
+          <div class="overflow">
+            <div class="container-books">
+              <ul class="books">
+                {% for book in books %}
+                <li>
+                  <a href="/bookview/{{book.name}}">
+                    <img src="{{book.img.url}}" alt="book-name" />
+                    <p>{{book.name}}</p>
+                  </a>
+                </li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

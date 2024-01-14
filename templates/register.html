@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SIGN UP</title>
+    <link rel="stylesheet" href="{% static '/css/register.css' %}" />
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="navbar-container">
+        <div class="container-logo">
+          <img
+            class="logo-icon"
+            src="{% static 'images/logo.jpg' %}"
+            alt="logo"
+          />
+          <img
+            class="logo-bar"
+            src="{% static 'images/line.jpg' %}"
+            alt="line"
+          />
+          <div class="logo-words-container">
+            <a class="logo-up" href="#"><span>AVRS</span></a>
+            <a class="logo-down" href="#">Library</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="hero">
+      <form action="/register/" method="POST">
+        {% csrf_token %}
+        <div class="container">
+          <div class="left-container">
+            <a href="#">NAME</a>
+            <a href="#">ADMISSION NO</a>
+            <a href="#">PASSWORD</a>
+            <a href="#">RETYPE PASSWORD</a>
+          </div>
+          <div class="right-container">
+            <input type="text" name="first_name" id="name" />
+            <input type="text" name="admn_no" id="admn-no" />
+            <input type="password" name="password1" id="password" />
+            <input type="password" name="password2" />
+          </div>
+        </div>
+        <div class="btn-container">
+          <input
+            class="sign-up"
+            type="Submit"
+            id="registerBtn"
+            value="SIGN UP"
+          /><br />
+        </div>
+      </form>
+      {% if messages %}
+      <div class="msg-container">
+        {%for message in messages %}
+        <a class="message" href="#">{{message}}</a>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </section>
+  </body>
+</html>
