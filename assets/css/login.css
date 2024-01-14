@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700;800&display=swap");
+:root {
+  --primary-color: #007af3;
+}
+
+body {
+  background: #f2f2f2;
+  margin: 0;
+  font-family: "Poppins";
+}
+body section.hero {
+  background-color: white;
+  padding: 1em;
+  width: 30em;
+  border-radius: 1em;
+  text-align: center;
+  align-items: center;
+  text-decoration: none;
+  box-shadow: 0 4px 8px 0 rgba(96, 92, 92, 0.19), 0 6px 20px 0 rgba(96, 92, 92, 0.19);
+  position: absolute;
+  top: 46%;
+  left: 50%;
+  transform: translateY(-50%) translate(-50%);
+  background: white;
+  padding-bottom: 0;
+}
+body section.hero form {
+  display: flex;
+  flex-direction: column;
+}
+body section.hero form .container {
+  display: flex;
+  justify-content: center;
+}
+body section.hero form .container .left-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+body section.hero form .container .left-container a {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: gray;
+  margin-top: 1.5em;
+  margin-right: 2em;
+}
+body section.hero form .container .right-container {
+  display: flex;
+  flex-direction: column;
+}
+body section.hero form .container .right-container input {
+  margin-top: 1.5em;
+  height: 1.8em;
+  border: 0.1em gray;
+  border-style: solid;
+  background: #e3e3e4;
+  border-radius: 0.8em;
+  padding: 0.1em 0.8em 0.1em 0.8em;
+}
+body section.hero form .container .right-container input:focus {
+  outline: none;
+}
+body section.hero form .btn-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+body section.hero form .btn-container a {
+  margin-left: 2em;
+  margin-top: 2.6em;
+  margin-bottom: 1.8em;
+  color: #007af3;
+  text-decoration: none;
+}
+body section.hero form .btn-container a:hover {
+  text-decoration: underline;
+}
+body section.hero form .btn-container .login {
+  margin-top: 1.8em;
+  margin-bottom: 1.8em;
+  background: var(--primary-color);
+  color: white;
+  padding: 0.7em 1.2em;
+  font-size: 1.02em;
+  border-radius: 5em;
+  font-weight: bold;
+  display: inline-block;
+  letter-spacing: 0.4px;
+  border: none;
+  width: 6em;
+}
+body section.hero form .btn-container .login:hover {
+  background-color: #0575e4;
+}
+body section.hero .msg-container {
+  margin-bottom: 1.2em;
+  margin-left: 0.8em;
+  margin-right: 0.8em;
+  border: 0.05em gray;
+  border-style: solid;
+  background: #e7e7e9;
+  border-radius: 0.8em;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 0.6em 0.8em;
+}
+body section.hero .msg-container a {
+  margin-right: auto;
+  color: #f34134;
+}
+
+.navbar {
+  background: white;
+  padding: 0.5em;
+}
+.navbar .navbar-container {
+  margin-left: 1em;
+}
+.navbar .navbar-container .container-logo {
+  display: flex;
+  cursor: pointer;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.navbar .navbar-container .container-logo .logo-icon {
+  width: 4em;
+}
+.navbar .navbar-container .container-logo .logo-bar {
+  height: 4em;
+}
+.navbar .navbar-container .container-logo .logo-words-container {
+  padding: 0.2em;
+  align-content: center;
+  display: grid;
+}
+.navbar .navbar-container .container-logo .logo-words-container .logo-up {
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+  font-size: 1.1em;
+}
+.navbar .navbar-container .container-logo .logo-words-container .logo-up span {
+  color: var(--primary-color);
+}
+.navbar .navbar-container .container-logo .logo-words-container .logo-down {
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+  font-size: 1.2em;
+}
+.navbar .navbar-container .container-logo:hover {
+  transform: scale(1.015, 1.015);
+}
+
+a {
+  text-decoration: none;
+}/*# sourceMappingURL=login.css.map */
